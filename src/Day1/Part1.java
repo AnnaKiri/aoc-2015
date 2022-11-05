@@ -15,21 +15,15 @@ public class Part1 {
 			scan.close();
 			
 			int result = 0;
-			int position = 0;
 			for (int i = 0; i < floor.length(); i++) {
 				if (floor.charAt(i) == '(') {
 					result ++;
 				} else {
 					result --;
 				}
-				
-				if (result == -1) {
-					position = i + 1;
-					break;
-				}
 			}
 			
-			System.out.println(position);
+			System.out.println(result);
 			
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found");
